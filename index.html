@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Music Player -->
+        <aside class="music-player">
+            <div class="album-art" id="album-art">
+                <div class="pulse-ring"></div>
+                <span class="ai-badge">AI GEN</span>
+            </div>
+            
+            <div class="track-info">
+                <h2 id="track-title">Cybernetic Pulse</h2>
+                <p id="track-artist">Neural Synth AI</p>
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn" class="glass-btn">prev</button>
+                <button id="play-btn" class="main-btn">PLAY</button>
+                <button id="next-btn" class="glass-btn">next</button>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+
+            <div class="playlist">
+                <div class="playlist-item active" data-index="0">01. Cybernetic Pulse</div>
+                <div class="playlist-item" data-index="1">02. Digital Rain</div>
+                <div class="playlist-item" data-index="2">03. Neon Horizon</div>
+            </div>
+        </aside>
+
+        <!-- Main Game Area -->
+        <main class="game-area">
+            <div class="game-header">
+                <div class="score-box">SCORE: <span id="score">000</span></div>
+                <div class="status-box">SYSTEM: <span id="status">ONLINE</span></div>
+            </div>
+            
+            <div class="canvas-wrapper">
+                <canvas id="snakeGame" width="400" height="400"></canvas>
+                <div id="game-over-overlay" class="hidden">
+                    <h1>GAME OVER</h1>
+                    <button id="restart-btn">REBOOT SYSTEM</button>
+                </div>
+            </div>
+
+            <div class="instructions">
+                USE [ ARROW KEYS ] OR [ WASD ] TO NAVIGATE
+            </div>
+        </main>
+    </div>
+
+    <audio id="audio-player"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
